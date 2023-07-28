@@ -1,13 +1,17 @@
+body,
+img,
+main,
+section {
+	box-sizing: border-box;
+}
 img:hover {
-	border: black solid 1px;
+	opacity: 50%;
 }
 #CLetter {
 	/*border: 1px solid black;*/
 }
 img {
 	opacity: 100%;
-	margin-top: 10%;
-	margin-left: 0.5rem;
 }
 .draw {
 	/*border: black solid 1px;*/
@@ -15,7 +19,41 @@ img {
 	min-height: 96px;
 	max-height: 96px;
 }
-
+.draw::before {
+	content: "Only CSS";
+	position: absolute;
+	top: -9px;
+	left: 15px;
+	font-family: "Nunito", sans-serif;
+	font-weight: 700;
+	background-color: #ff001ec5;
+	color: white;
+	border-radius: 2px;
+	padding: 2px 4px;
+}
+.mylogo {
+	position: relative;
+	margin-top: 5%;
+}
+.mylogo::before {
+	content: "Just Image";
+	position: absolute;
+	top: -9px;
+	left: 15px;
+	font-family: "Nunito", sans-serif;
+	font-weight: 700;
+	background-color: #ff001ec5;
+	color: white;
+	border-radius: 2px;
+	padding: 2px 4px;
+}
+.cadre {
+	padding: 1rem;
+	border-radius: 5px;
+	box-shadow: 3px 14px 34px 0px rgba(0, 0, 0, 0.18);
+	-webkit-box-shadow: 3px 14px 34px 0px rgba(0, 0, 0, 0.18);
+	-moz-box-shadow: 3px 14px 34px 0px rgba(0, 0, 0, 0.18);
+}
 /*background-color: #df162c 
  
  #CLetter {
@@ -752,10 +790,14 @@ img {
 	border-radius: 50%;
 }
 
-main {
-	margin: 0 auto;
+section {
 	/* border: 1px solid red; */
-	margin: 0 auto;
-	max-width: 50%;
-	position: relative;
+	display: inline-block;
+	position: absolute;
+	left: 50%;
+	top: 10%;
+	transform: translateX(-50%);
+}
+main {
+	/* border: 2px dotted green; */
 }
